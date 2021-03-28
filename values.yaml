@@ -74,7 +74,7 @@ core:
   #   memory: 512Mi
 
   standalone: false
-  numberOfServers: 3
+  numberOfServers: 5
   persistentVolume:
     ## whether or not persistence is enabled
     ##
@@ -186,11 +186,11 @@ readReplica:
     minReplicas: 1
     maxReplicas: 3
 
-  numberOfServers: 0
+  numberOfServers: 3
   persistentVolume:
     enabled: true
     mountPath: /data
-    size: 10Gi
+    size: 30Gi
     ## subPath: ""
 
   sidecarContainers: []
