@@ -10,7 +10,7 @@ image: "neo4j"
 imageTag: "4.2.2-enterprise"
 imagePullPolicy: "IfNotPresent"
 # imagePullSecret: registry-secret
-acceptLicenseAgreement: "no"
+acceptLicenseAgreement: "yes"
 podDisruptionBudget: {}
   # minAvailable: 2
   # maxUnavailable: 1
@@ -46,7 +46,7 @@ authEnabled: true
 # existingPasswordSecretKey
 
 # Specify cluster domain (used eg. as suffix in the eventual internal hostnames)
-clusterDomain: "cluster.local"
+clusterDomain: "graph.inspektre.local"
 
 # Specs for the images used for running tests against the Helm package
 # https://github.com/mneedham/k8s-kubectl this is a general kubectl docker image
@@ -58,7 +58,7 @@ plugins: "[\"apoc\"]"
 
 # The default name of the Neo4j database to use.
 # See https://neo4j.com/docs/operations-manual/current/manage-databases/introduction/#manage-databases-default
-defaultDatabase: "neo4j"
+defaultDatabase: "inspektre-io-db"
 
 # Cores
 core:
